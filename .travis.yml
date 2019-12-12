@@ -6,4 +6,4 @@ before_install:
     - docker build -t amitecs07/docker-tut -f Dockerfile.dev .
 
 script:
-    - docker run amitecs07/docker-tut npm run test -- --coverage
+    - docker run -e CI=true amitecs07/docker-tut npm run test
