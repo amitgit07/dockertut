@@ -7,3 +7,9 @@ test('renders hello world', () => {
   const linkElement = getByText(/hello world/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+test('renders hello world', () => {
+  const { getByText } = render(<App />);
+  const linkElement = getByText(/hello world/i);
+  expect(linkElement).toBeInTheDocument();
+});
